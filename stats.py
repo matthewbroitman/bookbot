@@ -12,4 +12,17 @@ def character_count(file_contents):
         else:
             characters[character] = 1
     return characters
+
+def sort_on(d):
+    return d["num"]
+
+def sorted_character_list(num_chars_dict):
+    sorted_list=[]
+    for character in num_chars_dict:
+        sorted_list.append({"char":character,"num":num_chars_dict[character]})
+    sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list
     
+    
+
+        
